@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import GainTracker from './Gaintracker'
+import LandingPage from './LandingPage'
+import Navbar from './NavBar'
+import PlanMaker from './PlanMaker'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar/>
+      <Switch>
+        <Route path='/gaintracker' component={GainTracker}/>
+        <Route path='/planmaker' component={PlanMaker}/>
+        <Route path='/' component = {LandingPage}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default App

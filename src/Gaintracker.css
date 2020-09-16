@@ -1,0 +1,8 @@
+.weight-grid {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.weight-grid-row td,th {
+    border: 1px solid black;
+    padding: 10px;
+}
